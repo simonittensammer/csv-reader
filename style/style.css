@@ -14,6 +14,25 @@ input, button {
     margin: 10px;
 }
 
+h2 {
+    padding: 10px;
+    font-size: 175%;
+}
+
+.next {
+    float: left;
+    padding: 0 10px;
+    font-size: 175%;
+}
+
+#next1 {
+    color: #FF4E48;
+}
+
+#next2 {
+    color: #2581CC;
+}
+
 .wrapper {
     position: absolute;
     text-align: center;
@@ -21,8 +40,16 @@ input, button {
     transform: translate(-50%, 0);
 }
 
+#durchgang {
+    position: absolute;
+    top: 10vh;
+    font-size: 750%;
+    left: 50vw;
+    transform: translate(-50%, 0);
+}
+
 #gruppeWrapper {
-    top: 40vh;
+    top: 42.5vh;
 }
 
 #zeitWrapper {
@@ -43,12 +70,14 @@ input, button {
 
 #gruppe1 {
     float: left;
-    text-align: right; 
+    text-align: right;
+    color: #FF4E48;
 }
 
 #gruppe2 {
     float: left;
     text-align: left;
+    color: #2581CC;
 }
 
 #zeit1 {

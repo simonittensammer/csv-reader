@@ -37,7 +37,8 @@ function processData(csv) {
     while (allTextLines.length) {
         lines.push(allTextLines.shift().split(','));
     }
-	console.log(lines);
+    console.log(lines);
+    drawNextLine();
 	//drawOutput(lines);
 }
 
@@ -57,20 +58,23 @@ function drawOutput(lines){
 
 function drawNextLine() {
     currentLine++;
-    //document.getElementById("outputLine").innerHTML = lines[currentLine];
     drawLine();
 }
 
 function drawPreviousLine() {
     currentLine--;
-    //document.getElementById("outputLine").innerHTML = lines[currentLine];
     drawLine();
 }
 
 function drawLine() {
+    document.getElementById("durchgang").innerHTML = lines[currentLine][0];
+
     document.getElementById("gruppe1").innerHTML = lines[currentLine][1];
     document.getElementById("gruppe2").innerHTML = lines[currentLine][3];
 
     document.getElementById("zeit1").innerHTML = lines[currentLine][2];
     document.getElementById("zeit2").innerHTML = lines[currentLine][4];
+
+    document.getElementById("next1").innerHTML = lines[currentLine +1][1];
+    document.getElementById("next2").innerHTML = lines[currentLine +1][3];
 }

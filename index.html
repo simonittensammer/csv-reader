@@ -1,12 +1,43 @@
-<!DOCTYPE html>
 <html>
-    <head>
-        <title>CSV-Reader</title>
-        <meta charset="utf-8">
-    </head>
+<head>
+  <title>CSV-Reader</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
-    <body>
-        
-    </body>
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
 
+<body>
+    <div>
+        <input type="file" id="csvFileInput" onchange="handleFiles(this.files)" accept=".csv">
+
+        <br>
+
+        <button onclick="drawPreviousLine();">Previous line</button>
+        <button onclick="drawNextLine();">Next line</button>
+
+        <div id="output">
+            <div id="gruppeWrapper" class="wrapper">
+                <div id="gruppe1" class="gruppe">
+                    Testgruppe 1
+                </div>
+    
+                <div id="gruppe2" class="gruppe">
+                    Testgruppe 2
+                </div>
+            </div>
+
+            <div id="zeitWrapper" class="wrapper">
+                <div id="zeit1" class="zeit">
+                    Testzeit 1
+                </div>
+    
+                <div id="zeit2" class="zeit">
+                    Testzeit 2
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
 </html>

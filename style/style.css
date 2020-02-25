@@ -1,0 +1,62 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #333333;
+    color: #EEEEEE;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+
+input, button {
+    margin: 10px;
+}
+
+.wrapper {
+    position: absolute;
+    text-align: center;
+    left: 50vw;
+    transform: translate(-50%, 0);
+}
+
+#gruppeWrapper {
+    top: 40vh;
+}
+
+#zeitWrapper {
+    top: 50vh;
+}
+
+.gruppe {
+    font-size: 300%;
+    padding: 0 2vw;
+    width: 20vw;
+}
+
+.zeit {
+    font-size: 200%;
+    padding: 0 2vw;
+    width: 15vw;
+}
+
+#gruppe1 {
+    float: left;
+    text-align: right; 
+}
+
+#gruppe2 {
+    float: left;
+    text-align: left;
+}
+
+#zeit1 {
+    float: left;
+    text-align: right;
+}
+
+#zeit2 {
+    float: left;
+    text-align: left;
+}

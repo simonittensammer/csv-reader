@@ -10,18 +10,34 @@
     <div>
         <input type="file" id="csvFileInput" onchange="handleFiles(this.files)" accept=".csv">
 
-        <br>
+        <div id="controls">
+            <button onclick="drawPreviousLine();">Vorheriger Durchgang</button>
+            <button onclick="drawNextLine();">Nächster Durchgang</button>
 
-        <button onclick="drawPreviousLine();">Previous line</button>
-        <button onclick="drawNextLine();">Next line</button>
+            <br>
+            <input type="text" name="specificLine" id="specificLine" placeholder="Durchgang-Nummer" onkeyup="previewLine();">
+            <button onclick="drawSpecificLine();">Bestätigen</button>
 
-        <div id="nextRun">
-            <h2>Nächster Durchgang:</h2>
-            <div id="next1" class="next">
-                Test1
+            <br>
+            <div id="inputRun">
+                <h2>Durchgang an der Input-Stelle:</h2>
+                <div id="input1" class="next">
+                    Test1
+                </div>
+                <div id="input2" class="next">
+                    Test2
+                </div>
             </div>
-            <div id="next2" class="next">
-                Test2
+            
+            <br><br><br><br>
+            <div id="nextRun">
+                <h2>Nächster Durchgang:</h2>
+                <div id="next1" class="next">
+                    Test1
+                </div>
+                <div id="next2" class="next">
+                    Test2
+                </div>
             </div>
         </div>
 

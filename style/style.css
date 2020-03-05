@@ -10,13 +10,22 @@ body {
     font-weight: bolder;
 }
 
+#controls {
+    display: none;
+}
+
 input, button {
     margin: 10px;
+    padding: 1vh;
 }
 
 h2 {
     padding: 10px;
     font-size: 175%;
+}
+
+#inputRun {
+    font-size: 60%;
 }
 
 .next {
@@ -25,11 +34,11 @@ h2 {
     font-size: 175%;
 }
 
-#next1 {
+#next1, #input1 {
     color: #FF4E48;
 }
 
-#next2 {
+#next2, #input2 {
     color: #2581CC;
 }
 

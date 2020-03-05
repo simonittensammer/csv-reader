@@ -7,6 +7,7 @@ function handleFiles(files) {
 	if (window.FileReader) {
 		// FileReader are supported.
 		getAsText(files[0]);
+		toggleBoxes();
 	} else {
 		alert('FileReader are not supported in this browser.');
 	}
@@ -35,25 +36,15 @@ function errorHandler(evt) {
 function processData(csv) {
     var allTextLines = csv.split(/\r\n|\n/);
     while (allTextLines.length) {
-        lines.push(allTextLines.shift().split(','));
+		lines.push(allTextLines.shift().split(';'));
     }
     console.log(lines);
     drawNextLine();
-	//drawOutput(lines);
 }
 
-function drawOutput(lines){
-	//Clear previous data
-	document.getElementById("output").innerHTML = "";
-	var table = document.createElement("table");
-	for (var i = 0; i < lines.length; i++) {
-		var row = table.insertRow(-1);
-		for (var j = 0; j < lines[i].length; j++) {
-			var firstNameCell = row.insertCell(-1);
-			firstNameCell.appendChild(document.createTextNode(lines[i][j]));
-		}
-	}
-	document.getElementById("output").appendChild(table);
+function toggleBoxes() {
+	document.getElementById("csvFileInput").style.display = "none";
+	document.getElementById("controls").style.display = "block";
 }
 
 function drawNextLine() {
@@ -64,6 +55,18 @@ function drawNextLine() {
 function drawPreviousLine() {
     currentLine--;
     drawLine();
+}
+
+function drawSpecificLine(line) {
+	currentLine = parseInt(document.getElementById("specificLine").value);
+	drawLine();
+}
+
+function previewLine() {
+	line = parseInt(document.getElementById("specificLine").value);
+	console.log(line);
+	document.getElementById("input1").innerHTML = lines[line][1];
+	document.getElementById("input2").innerHTML = lines[line][3];
 }
 
 function drawLine() {

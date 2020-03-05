@@ -50,22 +50,24 @@ h2 {
 
 #gruppeWrapper {
     top: 42.5vh;
+    width: 100vw;
 }
 
 #zeitWrapper {
     top: 50vh;
+    width: 100vw;
 }
 
 .gruppe {
     font-size: 300%;
     padding: 0 2vw;
-    width: 20vw;
+    width: 46vw;
 }
 
 .zeit {
     font-size: 200%;
     padding: 0 2vw;
-    width: 15vw;
+    width: 46vw;
 }
 
 #gruppe1 {
